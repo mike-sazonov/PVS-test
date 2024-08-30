@@ -6,7 +6,7 @@ class Participant(models.Model):
         "Имя",
         max_length=50,
     )
-    email = models.CharField(
+    email = models.EmailField(
         "Email",
         max_length=70,
     )
