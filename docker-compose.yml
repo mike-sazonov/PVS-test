@@ -1,7 +1,9 @@
 services:
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:1337
+    command: sh -c "python manage.py makemigrations &&
+                    python manage.py migrate &&
+                    python manage.py runserver 0.0.0.0:1337"
     volumes:
       - .:/app
     ports:
