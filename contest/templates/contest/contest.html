@@ -19,8 +19,11 @@
 
       <div>
         <h2>Форма участника</h2>
-        
-        <p>Здесь должна быть форма</p>
+        <form action="/" method="post">
+          {% csrf_token %}
+          {{ form }}
+          <button type="submit">Submit</button>
+        </form>
       </div>
   
       <div>
