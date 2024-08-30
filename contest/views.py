@@ -8,7 +8,7 @@ from .models import Participant
 class ContestView(FormView):
     form_class = ParticipantForm
     template_name = 'contest/contest.html'
-    success_url = 'contest'
+    success_url = '/'
 
     def form_valid(self, form):
         form.save()
