@@ -28,10 +28,13 @@
   
       <div>
         <h2>Участники</h2>
-
-        <p>
-          Здесь должен быть список участников
-        </p>
+          {% for user in users %}
+            <div>
+              {{ user.name }}
+              {{ user.email }}
+              {{ user.code }}
+            </div>
+          {% endfor %}
       </div>
     </div>
   </section>
